@@ -1,0 +1,100 @@
+/* Globals.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Sen:wght@400&family=Nunito+Sans:wght@200;300;400;700&display=swapfamily=IBM+Plex+Sans&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 200;
+    color: white;
+    background-color: black;
+  }
+
+    html {
+    font-family: Sen, Raleway, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sen', sans-serif;
+  }
+
+  main {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .myTypist {
+  font-size: 55px;
+  font-family: 'Nunito-Sans', 'Sen'
+  }
+}
+
+@layer components {
+  .navbar {
+    background-color: black;
+    border-bottom: 1.5px solid white;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    hover: text-blue-300;
+  }
+  .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 700;
+  }
+  .logo{
+    width: 75px; /* Adjust this value based on your desired size */
+    height: auto; /* Maintain aspect ratio */
+    fill: white;
+  }
+  .logo:hover{
+    fill: #2350d7;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+
+/* Margin for screens wider than 768px 
+@media (min-width: 768px) {
+  .typing-text {
+    margin-top: 150px;
+  }
+  .service-grid {
+    margin-top: 150px;
+  }
+}
+*/
+
+.backgroundImage {
+  background-image: url('/bg2.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.password-input {
+  background-color: #f0f0f0;
+  color: #333;
+  /* Add other styles as needed */
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
